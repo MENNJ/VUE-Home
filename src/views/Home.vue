@@ -9,7 +9,7 @@
          </Starport>
 
         <router-link  :to="{
-          path:'home2',
+          path:'/home2',
           query:{
             img:photo.imgSrc,
             title:photo.title
@@ -38,55 +38,53 @@
 
 <script >
 import { gsap } from 'gsap';
-import img from 'src/public/watch.png'
-import img_1 from 'src/public/Air_Max.png'
-import img_2 from  'src/public/watch_9.png'
+
 export default {
   name: 'home',
 
   data() {
-   return {
+    return {
       lines: [
         [
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 1' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Air_Max' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch 9' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 4' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 5' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 6' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 7' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 8' },
+          { imgSrc: 'src/public/watch.png  ', title: 'Apple Watch Ultra 1' },
+          { imgSrc: 'src/public/Air_Max.png', title: 'Apple Air_Max' },
+          { imgSrc: 'src/public/watch_9.png', title: 'Apple Watch 9' },
+          { imgSrc: 'src/public/watch.png  ', title: 'Apple Watch Ultra 4' },
+          { imgSrc: 'src/public/watch.png  ', title: 'Apple Watch Ultra 5' },
+          { imgSrc: 'src/public/watch.png  ', title: 'Apple Watch Ultra 6' },
+          { imgSrc: 'src/public/watch.png  ', title: 'Apple Watch Ultra 7' },
+          { imgSrc: 'src/public/watch.png  ', title: 'Apple Watch Ultra 8' },
         ],
         [
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 9' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 10' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 11' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 12' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 13' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 14' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 15' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 16' },
+          { imgSrc: 'src/public/watch.png  ', title: 'Apple Watch Ultra 9' },
+          { imgSrc: 'src/public/Air_Max.png', title: 'Apple Watch Ultra 10' },
+          { imgSrc: 'src/public/watch_9.png', title: 'Apple Watch Ultra 11' },
+          { imgSrc: 'src/public/watch.png  ', title: 'Apple Watch Ultra 12' },
+          { imgSrc: 'src/public/watch.png  ', title: 'Apple Watch Ultra 13' },
+          { imgSrc: 'src/public/watch.png  ', title: 'Apple Watch Ultra 14' },
+          { imgSrc: 'src/public/watch.png  ', title: 'Apple Watch Ultra 15' },
+          { imgSrc: 'src/public/watch.png  ', title: 'Apple Watch Ultra 16' },
         ],
         [
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 17' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 18' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 19' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 20' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 21' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 22' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 23' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 24' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 17' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 18' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 19' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 20' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 21' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 22' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 23' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 24' },
         ],
         [
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 25' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 26' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 27' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 28' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 29' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 30' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 31' },
-          { imgSrc: "require('@/public/Air_Max.png')", title: 'Apple Watch Ultra 32' },
-        ]
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 25' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 26' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 27' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 28' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 29' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 30' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 31' },
+          { imgSrc: 'src/public/watch.png', title: 'Apple Watch Ultra 32' },
+        ],
       ],
     };
   },
