@@ -193,7 +193,7 @@ export default {
 }
 
 img {
-  width: 80%;
+  width: 100%;
   height:  auto;
   pointer-events: none;
   user-select: none;

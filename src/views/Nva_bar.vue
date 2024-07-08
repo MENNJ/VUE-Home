@@ -1,9 +1,9 @@
 <template>
-  <div id="loading">
-    <div class="w-[90vw] h-[85vh] bg-green-300 rounded-3xl  dark:bg-green-800 ">
+<!--  <div id="loading">-->
+<!--    <div class="w-[90vw] h-[85vh] bg-green-300 rounded-3xl  dark:bg-green-800 ">-->
 
-    </div>
-  </div>
+<!--    </div>-->
+<!--  </div>-->
   <div v-if="!$route.meta.shovalues" class=" fixed top-0 z-[99] flex w-full h-[5vh] bg-[rgba(232,232,232,0.01)] m-auto">
     <div
         class="flex items-center rounded-3xl justify-around w-[35vw] h-full bg-[rgba(0,0,0,0.05)] caret-transparent mt-[1.5%]">
@@ -28,7 +28,7 @@
         </svg>
       </a>
       <a class="flex items-center font-[550] text-[black] leading-6 cursor-pointer transition-[0.3s] no-underline;
-          dark:text-white" @click="inout">
+          dark:text-white">
         <svg class="hover:text-green-400 dark:text-white " height="3vh" viewBox="0 0 24 24" width="3vh"
              xmlns="http://www.w3.org/2000/svg">
           <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
@@ -227,19 +227,19 @@ defineProps<{ msg: string }>();
 
 const isIconSwitched = ref(false);
 
-const Inout = ref(true);
+// const Inout = ref(true);
 
-
-const inout = (e) => {
-  let conainer = document.getElementById("loading");
-  if (Inout.value) {
-    Inout.value = !Inout.value;
-    conainer.classList.add("loading_out");
-  } else {
-    Inout.value = !Inout.value;
-    conainer.classList.remove("loading_out");
-  }
-}
+//
+// const inout = (e) => {
+//   let conainer = document.getElementById("loading");
+//   if (Inout.value) {
+//     Inout.value = !Inout.value;
+//     conainer.classList.add("loading_out");
+//   } else {
+//     Inout.value = !Inout.value;
+//     conainer.classList.remove("loading_out");
+//   }
+// }
   const toggleTheme = (event: MouseEvent) => {
 
     const x = event.clientX;
@@ -280,22 +280,22 @@ const inout = (e) => {
     });
   };
 </script>
-<style>
-#loading {
-  position: fixed;
-  flex-direction: column;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: transparent;
-  z-index: 98;
-  transition: 1s ease;
-}
+<!--<style>-->
+<!--#loading {-->
+<!--  position: fixed;-->
+<!--  flex-direction: column;-->
+<!--  bottom: -100%;-->
+<!--  left: 0;-->
+<!--  width: 100%;-->
+<!--  height: 100vh;-->
+<!--  background-color: transparent;-->
+<!--  z-index: 98;-->
+<!--  transition: 1s ease;-->
+<!--}-->
 
-.loading_out {
-  transform: translateY(-100%);
-}
+<!--.loading_out {-->
+<!--  transform: translateY(-100%);-->
+<!--}-->
 
 
-</style>
+<!--</style>-->
