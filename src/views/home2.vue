@@ -25,10 +25,10 @@
       </div>
     </div>
     <div class="w-lvw h-12 border-solid border border-y-gray-300"></div>
-    <div class="flex h-full w-full justify-center content-around flex-wrap">
-      <div class="flex w-full h-[40%] justify-evenly items-center rounded-2xl">
+    <div class="flex h-full w-[100vw] justify-center content-around flex-wrap">
+      <div class="flex w-full h-[60%] justify-evenly items-center ">
         <div class="swiper flex" style="z-index:0; padding: 60px">
-          <div class="swiper-wrapper justify-around" :style="swiperWrapperStyle">
+          <div class="swiper-wrapper justify-start" :style="swiperWrapperStyle">
             <div class="swiper-slide dark:bg-slate-800 justify-center bg-gray-100" :style="slideStyles[0]">
               <Starport class="p-[60px]" :port="String(route.query.title)" style="width: 400px; height: 400px;">
                 <img :src="route.query.img" alt="Gallery Image" />
