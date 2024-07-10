@@ -1,16 +1,17 @@
 <template>
-<!--  <div id="loading">-->
-<!--    <div class="w-[90vw] h-[85vh] bg-green-300 rounded-3xl  dark:bg-green-800 ">-->
 
-<!--    </div>-->
-<!--  </div>-->
-  <div v-if="!$route.meta.shovalues" class=" fixed top-0 z-[99] flex w-full h-[5vh] bg-[rgba(232,232,232,0.01)] m-auto">
-    <div
-        class="flex items-center rounded-3xl justify-around w-[35vw] h-full bg-[rgba(0,0,0,0.05)] caret-transparent mt-[1.5%]">
-      <a class="flex items-center font-[550] text-[black] leading-6 cursor-pointer transition-[0.3s] no-underline; "
-         href="#">
-        <svg class="hover:text-green-400 dark:text-white" height="3vh" viewBox="0 0 24 24" width="3vh"
-             xmlns="http://www.w3.org/2000/svg">
+  <div v-if="!$route.meta.shovalues" class="h-16  fixed top-0 w-[100vw] bg-white  z-[99] flex items-center justify-between dark:bg-black">
+
+    <div class="md:hidden lg:block w-[20%]">
+      <span class="font-bold text-xl ml-6 text-black dark:text-white">Message</span>
+    </div>
+
+    <div class="hidden md:flex justify-around w-[50%] text-sm items-center justify-between ml-10 ">
+
+      <div class=" gap-20 text-gray-600">
+        <div class="flex  flex-col ">
+          <svg class="cursor-pointer text-black hover:text-green-400 dark:text-white" height="3vh" viewBox="0 0 24 24" width="3vh"
+                                            xmlns="http://www.w3.org/2000/svg">
           <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             <path d="M5 21H19" stroke-dasharray="21" stroke-dashoffset="21">
               <animate attributeName="stroke-dashoffset" dur="0.2s" fill="freeze" values="21;0"/>
@@ -26,10 +27,10 @@
             </path>
           </g>
         </svg>
-      </a>
-      <a class="flex items-center font-[550] text-[black] leading-6 cursor-pointer transition-[0.3s] no-underline;
-          dark:text-white">
-        <svg class="hover:text-green-400 dark:text-white " height="3vh" viewBox="0 0 24 24" width="3vh"
+          <span>Home</span>
+        </div>
+        <div class="flex flex-col ">
+         <svg class="cursor-pointer text-black hover:text-green-400 dark:text-white " height="3vh" viewBox="0 0 24 24" width="3vh"
              xmlns="http://www.w3.org/2000/svg">
           <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
             <g stroke-width="2">
@@ -51,10 +52,10 @@
             </path>
           </g>
         </svg>
-      </a>
-      <a class="flex items-center font-[550] text-[black] leading-6 cursor-pointer transition-[0.3s] no-underline;
-         " href="#">
-        <svg class=" hover:text-green-400 dark:text-white" height="3vh" viewBox="0 0 24 24" width="3vh"
+          <span>Order</span>
+      </div>
+        <div class="flex flex-col">
+        <svg class="text-black cursor-pointer hover:text-green-400 dark:text-white" height="3vh" viewBox="0 0 24 24" width="3vh"
              xmlns="http://www.w3.org/2000/svg">
           <defs>
             <symbol id="lineMdCogFilledLoop0">
@@ -88,30 +89,11 @@
           </defs>
           <rect fill="currentColor" height="24" mask="url(#lineMdCogFilledLoop1)" width="24"/>
         </svg>
-      </a>
-      <a class="flex items-center font-[550] text-[black] leading-6 cursor-pointer transition-[0.3s] no-underline;
-          " href="#">
-        <svg class="hover:text-green-400 dark:text-white" height="3.5vh" viewBox="0 0 24 24"
-             width="3.5vh" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path
-                d="M12 5C13.66 5 15 6.34 15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8C9 6.34315 10.3431 5 12 5z"
-                stroke-dasharray="20"
-                stroke-dashoffset="20">
-              <animate attributeName="stroke-dashoffset" dur="0.4s" fill="freeze" values="20;0"/>
-            </path>
-            <path d="M12 14C16 14 19 16 19 17V19H5V17C5 16 8 14 12 14z" opacity="0" stroke-dasharray="36"
-                  stroke-dashoffset="36">
-              <set attributeName="opacity" begin="0.5s" to="1"/>
-              <animate attributeName="stroke-dashoffset" begin="0.5s" dur="0.4s" fill="freeze" values="36;0"/>
-            </path>
-          </g>
-        </svg>
-      </a>
-      <a class="flex items-center font-[550] text-[black] leading-6 cursor-pointer transition-[0.3s] no-underline;  "
-         @click="toggleTheme">
-        <svg v-if="!isIconSwitched" class="hover:text-green-400 dark:text-white" height="3vh"
-             viewBox="0 0 24 24" width="3vh" xmlns="http://www.w3.org/2000/svg">
+          <span>Setting</span>
+        </div>
+        <div class="flex flex-col " @click="toggleTheme">
+        <svg v-if="!isIconSwitched" class="text-black cursor-pointer hover:text-green-400 dark:text-white" width="3vh" height="3vh"
+             viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
           <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             <path d="M0 0">
               <animate attributeName="d" begin="0.6s" dur="0.2s" fill="freeze"
@@ -146,8 +128,8 @@
             <animate attributeName="r" dur="0.4s" fill="freeze" values="10;6"/>
           </circle>
         </svg>
-        <svg v-else class="hover:text-green-400 dark:text-white" height="3vh" viewBox="0 0 24 24"
-             width="3vh" xmlns="http://www.w3.org/2000/svg">
+        <svg v-else class="text-black cursor-pointer hover:text-green-400 dark:text-white" width="3vh" height="3vh" viewBox="0 0 24 24"
+             xmlns="http://www.w3.org/2000/svg">
           <g fill="none" stroke="currentColor" stroke-dasharray="4" stroke-dashoffset="4" stroke-linecap="round"
              stroke-linejoin="round">
             <path d="M13 4h1.5M13 4h-1.5M13 4v1.5M13 4v-1.5">
@@ -213,7 +195,31 @@
             <animateMotion calcMode="linear" dur="0.6s" fill="freeze" path="M0 0v-22"/>
           </path>
         </svg>
-      </a>
+          <span>Home</span>
+          </div>
+      </div>
+
+
+
+    </div>
+
+    <div class='hidden xl:flex p-2 bg-gray-200 dark:bg-slate-50 items-center rounded-xl'>
+      <input type="text" placeholder="search..." class="bg-transparent outline-none"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="3vh" height="3vh" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="16" stroke-dashoffset="16" d="M10.5 13.5L3 21">
+          <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.2s" values="16;0"/>
+        </path>
+          <path stroke-dasharray="40" stroke-dashoffset="40" d="M10.7574 13.2426C8.41421 10.8995 8.41421 7.10051 10.7574 4.75736C13.1005 2.41421 16.8995 2.41421 19.2426 4.75736C21.5858 7.10051 21.5858 10.8995 19.2426 13.2426C16.8995 15.5858 13.1005 15.5858 10.7574 13.2426Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="40;0"/>
+          </path>
+        </g>
+      </svg>
+    </div>
+
+    <div class="w-[30%] flex items-center gap-4 xl:gap-2 justify-end">
+      <div class="flex items-center gap-2 text-sm">
+        <svg class="md:mr-6" xmlns="http://www.w3.org/2000/svg" width="4vh" height="4vh"  viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="20" stroke-dashoffset="20" d="M12 5C13.66 5 15 6.34 15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8C9 6.34315 10.3431 5 12 5z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0"/></path><path stroke-dasharray="36" stroke-dashoffset="36" d="M12 14C16 14 19 16 19 17V19H5V17C5 16 8 14 12 14z" opacity="0"><set attributeName="opacity" begin="0.5s" to="1"/><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.4s" values="36;0"/></path></g></svg>
+      </div>
+      <Menu/>
     </div>
   </div>
 </template>
@@ -222,24 +228,12 @@
 <script lang="ts" setup>
 
 import {ref} from 'vue';
+import Menu from "./Menu.vue";
 
 defineProps<{ msg: string }>();
 
 const isIconSwitched = ref(false);
 
-// const Inout = ref(true);
-
-//
-// const inout = (e) => {
-//   let conainer = document.getElementById("loading");
-//   if (Inout.value) {
-//     Inout.value = !Inout.value;
-//     conainer.classList.add("loading_out");
-//   } else {
-//     Inout.value = !Inout.value;
-//     conainer.classList.remove("loading_out");
-//   }
-// }
   const toggleTheme = (event: MouseEvent) => {
 
     const x = event.clientX;
@@ -280,22 +274,4 @@ const isIconSwitched = ref(false);
     });
   };
 </script>
-<!--<style>-->
-<!--#loading {-->
-<!--  position: fixed;-->
-<!--  flex-direction: column;-->
-<!--  bottom: -100%;-->
-<!--  left: 0;-->
-<!--  width: 100%;-->
-<!--  height: 100vh;-->
-<!--  background-color: transparent;-->
-<!--  z-index: 98;-->
-<!--  transition: 1s ease;-->
-<!--}-->
 
-<!--.loading_out {-->
-<!--  transform: translateY(-100%);-->
-<!--}-->
-
-
-<!--</style>-->
