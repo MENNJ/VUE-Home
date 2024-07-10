@@ -1,6 +1,6 @@
 <template>
 
-  <div class="flex flex-col items-center w-lvw h-lvh dark:bg-blue-100">
+  <div class="flex flex-col justify-start items-center w-lvw h-lvh dark:bg-blue-100">
     <div class="flex justify-between w-[90%] h-12 py-2.5">
       <div>
         <p class="text-lg font-bold tracking-widest subpixel-antialiased">{{ route.query.title }}</p>
@@ -36,7 +36,7 @@
     </div>
 
 
-    <div class="flex h-full w-[100vw]  justify-center flex-wrap">
+    <div class="flex  w-[100vw]  justify-center flex-wrap">
 
 
       <div class="swiper" style="z-index:0; padding: 0 60px 40px 60px">
@@ -56,25 +56,14 @@
             </div>
           </div>
         </div>
-
         <div class="swiper-pagination"></div>
-
       </div>
 
-      <div class="w-[75%] h-[60vh] relative  mt-[50px] ">
-        <h2 class=" font-sans font-medium tracking-widest text-[19px] sm:text-lg">设计</h2>
-        <h3 class="font-sans tracking-wider  mt-[10px] font-bold text-[55px]  md:text-[100px]">十足原创,<br>请细品。</h3>
-        <div class="absolute  tracking-widest sm:right-0 sm:bottom-0 font-semibold sm:w-[40%] w-full font-sans text-[19px] mt-12">
-          <p>这是一款经过全方位重新构思的头戴式耳机。从两侧的耳垫到头带的穹网，AirPods&nbsp;Max 带来众多精妙设计，体现了对服帖感的执着追求，让不同头形的用户都能获得理想的隔音效果，在美妙的音色中尽情
-            <span class="">陶醉。</span></p>
-        </div>
+
+
+      <div class=" mt-[20px] ">
+        <video class="w-[80vw]  rounded-2xl " autoplay="autoplay" loop="loop" muted="muted" src="../assets/video/large_2x.mp4"/>
       </div>
-
-<!--      <div class="h-[100vh] mt-[20px] ">-->
-<!--        <video class="w-[80vw]  rounded-2xl " autoplay="autoplay" loop="loop" muted="muted" src="../assets/video/large_2x.mp4"/>-->
-<!--      </div>-->
-
-
     </div>
 
 
